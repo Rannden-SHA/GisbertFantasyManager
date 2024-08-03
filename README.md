@@ -34,25 +34,25 @@ Para facilitar la gestión de transacciones, puedes usar los siguientes atajos d
 
 ### Linux:
 
-1. **Clona el repositorio**:
+   1. **Clona el repositorio**:
 
    ```bash
    git clone https://github.com/Rannden-SHA/fantasy-league-manager.git
    ```
-2. **Instala las dependencias**:
+   2. **Instala las dependencias**:
 
   Asegúrate de tener Python instalado y luego instala las librerías necesarias:
 
-```bash
-pip install tkinter matplotlib pillow pandas
-```
-3. **Ejecuta la aplicación**:
+   ```bash
+   pip install tkinter matplotlib pillow pandas
+   ```
+   3. **Ejecuta la aplicación**:
 
-Navega al directorio del proyecto y ejecuta el script:
+   Navega al directorio del proyecto y ejecuta el script:
 
-```bash
-python GisbertFantasyManager.py
-```
+   ```bash
+   python GisbertFantasyManager.py
+   ```
 
 ### Windows:
 
