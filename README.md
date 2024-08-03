@@ -68,7 +68,7 @@ Puedes descargar la aplicación directamente desde [aquí](https://www.dropbox.c
 
 ![HISTORY](https://github.com/Rannden-SHA/GisbertFantasyManager/blob/main/Screenshots/Historial_Screen.png)
 
-![FILES](https://github.com/Rannden-SHA/GisbertFantasyManager/blob/main/Screenshots/Historial_Screen.png)
+![FILES](https://github.com/Rannden-SHA/GisbertFantasyManager/blob/main/Screenshots/Archivos_Screen.png)
 
 ## 🛠️ Contribuciones
 
