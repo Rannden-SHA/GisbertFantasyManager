@@ -39,7 +39,7 @@ Para facilitar la gestión de transacciones, puedes usar los siguientes atajos d
    1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/Rannden-SHA/fantasy-league-manager.git
+   git clone https://github.com/Rannden-SHA/GisbertFantasyManager.git
    ```
    2. **Instala las dependencias**:
 
