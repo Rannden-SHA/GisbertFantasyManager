@@ -125,6 +125,17 @@ class FantasyLeagueApp:
 
         tree.pack(fill=tk.BOTH, expand=True)
 
+    def display_image(self, parent_frame, image_path):
+        try:
+            img = Image.open(image_path)
+            img = img.resize((300, 300), Image.LANCZOS)  # Cambia el tamaño de la imagen según sea necesario
+            photo = ImageTk.PhotoImage(img)
+        
+            label = tk.Label(parent_frame, image=photo)
+            label.image = photo  # Guardar una referencia de la imagen para evitar que sea recolectada por el garbage collector
+            label.pack(pady=20)
+        except Exception as e:
+            print(f"No se pudo cargar la imagen: {e}")
 
     def create_main_screen(self):
         self.clear_frame(self.main_frame)
@@ -134,6 +145,9 @@ class FantasyLeagueApp:
             welcome_label.pack(pady=20)
             info_label = tk.Label(self.main_frame, text="Cree o cargue una liga para comenzar.", font=("Arial", 16), bg="#f0f0f0")
             info_label.pack(pady=10)
+            # Mostrar imagen
+            image_path = "icon.ico"  # Cambia esto por la ruta de tu imagen
+            self.display_image(self.main_frame, image_path)            
             return
 
         # Configura la vista de las tablas y las estadísticas
@@ -174,11 +188,6 @@ class FantasyLeagueApp:
 
         quick_action_frame = tk.Frame(self.main_frame, bg="#f0f0f0")
         quick_action_frame.pack(pady=20)
-
-        tk.Label(quick_action_frame, text="Acción rápida:", font=("Arial", 14), bg="#f0f0f0").grid(row=0, column=0, padx=5, pady=5)
-        self.quick_action_entry = tk.Entry(quick_action_frame, font=("Arial", 14))
-        self.quick_action_entry.grid(row=0, column=1, padx=5, pady=5)
-        tk.Button(quick_action_frame, text="Ejecutar", command=self.quick_action).grid(row=0, column=2, padx=5, pady=5)
 
         # Mostrar estadísticas en el lado derecho
         self.show_league_statistics(right_frame)
@@ -356,39 +365,6 @@ class FantasyLeagueApp:
             messagebox.showinfo("Valor del Equipo Actualizado", f"Valor del equipo de {participant} actualizado a {new_value}€.")
             self.create_main_screen()
     
-    def quick_action(self):
-        if not self.current_league:
-            messagebox.showwarning("Advertencia", "Por favor, cargue una liga primero.")
-            return
-        
-        try:
-            action_data = self.quick_action_entry.get().split()
-            if len(action_data) != 3:
-                raise ValueError("Formato incorrecto")
-            
-            person_number = int(action_data[0])
-            amount = float(action_data[1])
-            action_type = action_data[2].lower()
-            
-            participants = list(self.league_data[self.current_league].keys())
-            if person_number < 1 or person_number > len(participants):
-                raise ValueError("Número de persona fuera de rango")
-            
-            participant = participants[person_number - 1]
-            if action_type == "compra":
-                self.register_purchase(participant)
-            elif action_type == "venta":
-                self.register_sale(participant)
-            elif action_type == "dinero":
-                self.add_money(participant)
-            elif action_type == "puntos":
-                self.add_points(participant)
-            elif action_type == "valor":
-                self.update_team_value(participant)
-            else:
-                raise ValueError("Tipo de acción desconocido")
-        except Exception as e:
-            messagebox.showerror("Error", f"Error en acción rápida: {str(e)}")
 
     def view_full_history(self):
         if not self.current_league:
