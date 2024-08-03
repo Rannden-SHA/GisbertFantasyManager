@@ -2,6 +2,8 @@
 
 Bienvenido a **Gisbert's Fantasy League Manager**: una herramienta completa para gestionar ligas de fantasy football. Este programa te permite crear ligas, gestionar participantes, registrar compras y ventas, y generar estadísticas útiles.
 
+![INTRO](https://github.com/Rannden-SHA/GisbertFantasyManager/blob/main/Screenshots/Intro_screen.png)
+
 ## 📋 Características
 
 - **Crear y Cargar Ligas** 🏈: Crea nuevas ligas o carga ligas existentes desde archivos JSON.
@@ -61,8 +63,6 @@ Para facilitar la gestión de transacciones, puedes usar los siguientes atajos d
 Puedes descargar la aplicación directamente desde [aquí](https://www.dropbox.com/scl/fi/6zbkymfteteaxcfspws1i/GisbertFantasyManager.exe?rlkey=7wsfvv4mxj8k6nf8h9zjfokth&st=97nliqfs&dl=0).
 
 ## Screenshots:
-
-![INTRO](https://github.com/Rannden-SHA/GisbertFantasyManager/blob/main/Screenshots/Intro_screen.png)
 
 ![MAIN](https://github.com/Rannden-SHA/GisbertFantasyManager/blob/main/Screenshots/Main_Screen.png)
 
