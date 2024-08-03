@@ -227,14 +227,14 @@ class FantasyLeagueApp:
         tk.Label(legend_window, text="Leyenda de Atajos de Teclado", font=("Arial", 14)).pack(pady=10)
         
         shortcuts = [
-            ("Ctrl + d", "Añadir Dinero"),
-            ("Ctrl + p", "Añadir Puntos"),
-            ("Ctrl + b", "Registrar Compra"),
-            ("Ctrl + v", "Registrar Venta"),
-            ("Ctrl + u", "Actualizar Valor del Equipo"),
-            ("Ctrl + h", "Ver Historial Completo"),
-            ("Ctrl + r", "Ver Historial de Persona"),
-            ("Ctrl + s", "Mostrar Leyenda de Atajos")
+            ("Ctrl + D", "Añadir Dinero"),
+            ("Ctrl + P", "Añadir Puntos"),
+            ("Ctrl + B", "Registrar Compra"),
+            ("Ctrl + V", "Registrar Venta"),
+            ("Ctrl + U", "Actualizar Valor del Equipo"),
+            ("Ctrl + H", "Ver Historial Completo"),
+            ("Ctrl + R", "Ver Historial de Persona"),
+            ("Ctrl + S", "Mostrar Leyenda de Atajos")
         ]
         
         for key, action in shortcuts:
